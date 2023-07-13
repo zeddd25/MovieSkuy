@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../Home/Home.css";
 import MovieList from "../../components/Movielist/MovieList";
+// Component
 import Navbar from "../../components/Navbar/Navbar";
+import HeroBanner from "./HeroBanner/HeroBanner";
 
 const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -17,21 +19,9 @@ const Home = () => {
 
   return (
     <div>
-      <MovieList />
+      {/* <MovieList /> */}
       <Navbar />
-      <div className="container">
-        {popularMovies.map((movie) => (
-          <div>
-            <h3>{movie ? movie.original_title : ""}</h3>
-            <img
-              src={`https://image.tmdb.org/t/p/original${
-                movie && movie.backdrop_path
-              }`}
-              height={500}
-            />
-          </div>
-        ))}
-      </div>
+      <HeroBanner />
     </div>
   );
 };
