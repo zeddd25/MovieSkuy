@@ -1,0 +1,60 @@
+
+.navbar {
+    display: flex;
+    /* background-color: cadetblue; */
+    padding-left: 90px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.movie-list {
+    position: relative;
+}
+
+.dropdown_list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    opacity: 0;
+    }
+
+.dropdown_list span{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: black;
+    font-size: 12px;
+    padding-top: 10px;    
+    padding-bottom: 10px;    
+    
+}
+
+.movie-list:hover .dropdown_list {
+    opacity : 1;
+    transition: 1s;
+}
+
+.logo{
+    display: flex;    
+    align-items: center;
+}
+
+.logo img{
+    height: 35px;
+}
+
+
