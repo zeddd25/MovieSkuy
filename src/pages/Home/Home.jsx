@@ -23,6 +23,7 @@ const Home = () => {
       {/* <MovieList /> */}
       <Navbar />
       <HeroBanner />
+      {/* <HeroBanner /> */}
     </div>
   );
 };
