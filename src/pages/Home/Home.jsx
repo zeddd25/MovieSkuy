@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div>
       <MovieList />
-      <h1>data film popular 🚀</h1>
+      <Navbar />
       <div className="container">
       {
       
