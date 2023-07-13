@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div>
       <MovieList />
-      <h1>data film popular 2023 ubah 🚀</h1>
+      <Navbar />
       <div className="container">
         {popularMovies.map((movie) => (
           <div>
