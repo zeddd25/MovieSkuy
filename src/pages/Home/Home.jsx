@@ -20,9 +20,9 @@ const Home = () => {
 
   return (
     <div>
-      {/* <MovieList /> */}
       <Navbar />
       <HeroBanner />
+      <MovieList />
       {/* <HeroBanner /> */}
     </div>
   );
