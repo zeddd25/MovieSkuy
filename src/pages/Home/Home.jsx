@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import { NavLink } from "react-router-dom";
 import "../Home/Home.css";
 import MovieList from "../../components/Movielist/MovieList";
@@ -19,9 +20,10 @@ const Home = () => {
 
   return (
     <div>
-      {/* <MovieList /> */}
       <Navbar />
       <HeroBanner />
+      <MovieList />
+      {/* <HeroBanner /> */}
     </div>
   );
 };
