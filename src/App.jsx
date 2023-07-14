@@ -9,7 +9,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route index element={<Home />}></Route>
-        <Route path="movie/:id" element={<h1>Movie detail page</h1>}></Route>
+        <Route path="movie/:id" element={<h1 style={{color: "white"}}>Movie detail page</h1>}></Route>
         <Route path="movies/:type" element={<MovieList />}></Route>
         <Route path="tvshow/:type" element={<TvShowList />}></Route>
         <Route path="/*" element={<h1>error pages!!</h1>}></Route>
