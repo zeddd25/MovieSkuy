@@ -6,9 +6,8 @@
 
 .container{
     position: absolute;
-    /* margin: auto; */
     z-index: 100;
-    width: 100%;
+    width: 99%;
 }
 
 .navbar ul {
