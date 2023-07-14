@@ -1,3 +1,16 @@
+
+import { useEffect, useState } from "react"
+import { NavLink } from "react-router-dom"
+import "../Home/Home.css"
+import Navbar from "../../components/Navbar/Navbar"
+import MovieList from "../../components/MovieList/MovieList"
+import TvShowList from "../../components/TvShowList/TvShowList"
+
+const Home = () => {
+  return (
+    <div>
+      <Navbar />
+      <MovieList />
 import { useEffect, useState } from "react";
 
 import { NavLink } from "react-router-dom";
@@ -23,7 +36,6 @@ const Home = () => {
       <Navbar />
       <HeroBanner />
       <MovieList />
-      {/* <HeroBanner /> */}
     </div>
   );
 };
