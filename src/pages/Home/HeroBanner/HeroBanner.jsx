@@ -12,10 +12,10 @@ const HeroBanner = () => {
           {/* Text */}
           <div className="warp_judul">
             <h1 className="sub_judul">WELCOME TO MOVIESKUY</h1>
-            <text className="judul">
+            <span className="judul">
               <span className="kurus">TEMPAT NONTON </span>
               <span className="besar">FILMS, TV SHOW & DRAMA</span>
-            </text>
+            </span>
           </div>
           {/* Search */}
           <Search />
