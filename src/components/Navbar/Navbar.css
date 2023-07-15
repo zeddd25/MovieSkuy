@@ -2,18 +2,18 @@
     display: flex;
     width: 90%;
     padding-top: 8px;
-}
-
-.container{
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .container{
     position: absolute;
-    z-index: 100;
+    z-index: 1;
     width: 99%;
 }
 
 .navbar ul {
   display: flex;
   gap: 50px;
-  font-family: Arial, Helvetica, sans-serif;
   color: white;
   font-size: 18px;
   font-weight: bold;
@@ -25,44 +25,43 @@
 
 .movie-list {
   position: relative;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 .dropdown_list {
-  position: absolute;
   top: 100%;
-  left: 0;
-  background-color: #ffffff;
   width: 140px;
-  border-radius: 3px;
-  opacity: 0;
+  display: none;
+  position: absolute;
+  border-radius: 5px;
+  transition: opacity 1s ease;
 }
 
 .dropdown_list span {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: black;
-  font-size: 15px;
-  /* padding-top: 10px;     */
-  /* padding-bottom: 10px;     */
   padding: 10px;
-  font-weight: 500;
+  padding-left: 0%;
+}
+.movie-list:hover .dropdown_list {
+  display: block;
 }
 
 .text_dropdown {
+  font-size: 14px;
   text-decoration: none;
-  color: black;
+  color: rgba(255,255,255,.5);
+  letter-spacing: 0px;
+  list-style-type: square;
 }
 
 .text_dropdown:hover {
-  color: #030000;
-  text-decoration: underline;
+  color: aliceblue;
 }
 
-.movie-list:hover .dropdown_list {
-  opacity: 1;
-  transition: 1s;
-}
 
 .logo {
   display: flex;
@@ -72,3 +71,4 @@
 .logo img {
   height: 35px;
 }
+
