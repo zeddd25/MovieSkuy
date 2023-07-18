@@ -1,5 +1,6 @@
-.movie_list {
+.tvshow_list {
   padding: 0 3rem 3rem 3rem;
+  margin-top: 100px;
 }
 
 .list_title {
@@ -12,4 +13,31 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.load_more_button {
+  background-color: #ff6f00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load_more_button:hover {
+  background-color: #ff8f00;
+}
+
+.load_more_button:focus {
+  outline: none;
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-top: 50px;
 }
