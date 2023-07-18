@@ -8,7 +8,7 @@ const DropdownList = ({ items }) => {
       <span>
         {items.map((item) => (
           <NavLink to={item.url} className="text_dropdown" key={item.id}>
-            {item.icon} {item.label}
+          ▶ {item.label}
           </NavLink>
         ))}
       </span>
@@ -19,10 +19,10 @@ const DropdownList = ({ items }) => {
 // komponent navbar
 const Navbar = () => {
   const movieItems = [
-    { id: 1, url: "/movies/top_rated", label: "Top Rated", icon: "🎥" },
-    { id: 2, url: "/movies/popular", label: "Popular", icon: "🎥" },
-    { id: 3, url: "/movies/upcoming", label: "Upcoming", icon: "🎥" },
-    { id: 4, url: "/movies/now_playing", label: "Now Playing", icon: "🎥" },
+    { id: 1, url: "/movies/top_rated", label: "Top Rated" },
+    { id: 2, url: "/movies/popular", label: "Popular" },
+    { id: 3, url: "/movies/upcoming", label: "Upcoming" },
+    { id: 4, url: "/movies/now_playing", label: "Now Playing" },
   ];
 
   const tvShowItems = [
