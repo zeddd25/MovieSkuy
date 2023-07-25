@@ -1,3 +1,6 @@
+.poster {
+  /* background-color: aqua; */
+}
 .warp_carousel {
   text-decoration: none;
   color: aliceblue;
@@ -10,6 +13,7 @@
   overflow: hidden;
   border-radius: 20px;
   margin: auto;
+  margin-top: 50px;
 }
 
 .posterImage {
@@ -73,8 +77,9 @@
 
 .posterImage__description {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  width: 50%;
+  width: 60%;
   text-align: left;
   font-size: 25px;
   color: rgb(192, 192, 192);
+  /* background-color: blueviolet; */
 }
