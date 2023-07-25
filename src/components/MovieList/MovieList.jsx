@@ -16,7 +16,6 @@ const MovieList = () => {
     setCurrentPage(1);
   }, [type]);
 
-
   useEffect(() => {
     const fetchData = async () => {
       const movieData = await getMovieList(type || "popular", currentPage);
@@ -54,11 +53,11 @@ const MovieList = () => {
           ))}
         </div>
         <div className="button_container">
-        {currentPage < totalPages && (
-          <button onClick={handleLoadMore} className="load_more_button">
-            Load More
-          </button>
-        )}
+          {currentPage < totalPages && (
+            <button onClick={handleLoadMore} className="load_more_button">
+              Load More
+            </button>
+          )}
         </div>
       </div>
     </div>

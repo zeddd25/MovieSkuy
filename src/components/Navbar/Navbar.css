@@ -1,14 +1,14 @@
 .navbar {
-    display: flex;
-    width: 90%;
-    padding-top: 8px;
-    font-family: 'Outfit', sans-serif;
-  }
-  
-  .container{
-    position: absolute;
-    z-index: 1;
-    width: 99%;
+  display: flex;
+  width: 90%;
+  padding-top: 8px;
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  position: absolute;
+  z-index: 1;
+  width: 99%;
 }
 
 .navbar ul {
@@ -53,7 +53,7 @@
 .text_dropdown {
   font-size: 14px;
   text-decoration: none;
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0px;
   list-style-type: square;
 }
@@ -61,7 +61,6 @@
 .text_dropdown:hover {
   color: aliceblue;
 }
-
 
 .logo {
   display: flex;
@@ -71,4 +70,3 @@
 .logo img {
   height: 35px;
 }
-

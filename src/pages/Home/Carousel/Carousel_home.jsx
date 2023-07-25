@@ -17,13 +17,13 @@ const Carousel_home = () => {
 
   return (
     <>
-      <div className="poster">
+      <div className="posterHome">
         <Carousel
           showThumbs={false}
           autoPlay={true}
           transitionTime={1}
           infiniteLoop={true}
-          showStatus={true}
+          showStatus={false}
           showArrows={false}
           showIndicators={true}
         >
@@ -50,7 +50,7 @@ const Carousel_home = () => {
                   </span>
                 </div>
                 <div className="posterImage__description">
-                  {movie ? movie.overview : ""}
+                  {movie?.overview?.slice(0, 308) + "..." || ""}
                 </div>
               </div>
             </div>
