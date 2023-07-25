@@ -1,9 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Card from "../Card/Card";
 import "../MovieList/MovieList.css";
-import { getMovieList } from "../../Api/Api";
 import Navbar from "../Navbar/Navbar";
+import CardLoader from "../../utils/CardLoader";
+import { getImageUrlPoster } from "../../utils/ImageUtils";
+import Pagination from "../Pagination/Pagination";
+import { fetchMovieData, fetchVideoData } from "../../utils/ApiUtils";
+import {
+  handleNextPage,
+  handlePageClick,
+  handlePrevPage,
+} from "../../utils/PaginationUtils";
+const Cards = React.lazy(() => import("../Card/Card"));
 
 const MovieList = () => {
   const [movieList, setMovieList] = useState([]);
@@ -16,50 +24,65 @@ const MovieList = () => {
     setCurrentPage(1);
   }, [type]);
 
+  useEffect(() => {
+    setMovieList([]);
+    setCurrentPage(1);
+  }, [type]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const movieData = await getMovieList(type || "popular", currentPage);
-      setMovieList((prevList) => [...prevList, ...movieData.results]);
-      setTotalPages(movieData.total_pages);
-    };
-
-    fetchData();
+    fetchMovieData(type, currentPage, setMovieList, setTotalPages); // Use the fetchData function here
   }, [type, currentPage]);
 
-  const imageBaseUrl = import.meta.env.VITE_APP_BASE_IMAGE_URL;
+  // Ketika currentPage berubah, reset movieList untuk menghindari data yang berkumpul
+  useEffect(() => {
+    setMovieList([]);
+  }, [currentPage]);
 
-  const handleLoadMore = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage((prevPage) => prevPage + 1);
-    }
+  const renderCards = () => {
+    return movieList.map((movie, i) => {
+      const {
+        original_title,
+        release_date,
+        vote_average,
+        overview,
+        poster_path,
+      } = movie;
+
+      return (
+        <Suspense fallback={<CardLoader />} key={i}>
+          <Cards
+            movie={movie}
+            movieTitle={original_title || ""}
+            movieRelese={release_date || ""}
+            movieRating={vote_average || ""}
+            movieDescription={overview ? `${overview.slice(0, 118)}...` : ""}
+            movieImage={getImageUrlPoster(poster_path || "")}
+          />
+        </Suspense>
+      );
+    });
   };
 
   return (
     <div className="container">
       <Navbar />
       <div className="movie_list">
+        {/* Button-Title */}
+        <div className="container_button_title">
         <h2 className="list_title">{type ? type.toUpperCase() : "POPULAR"}</h2>
-        <div className="list_cards">
-          {movieList.map((movie, i) => (
-            <Card
-              key={i}
-              movie={movie}
-              movieTitle={movie?.original_title || ""}
-              movieRelese={movie?.release_date || ""}
-              movieRating={movie?.vote_average || ""}
-              movieDescription={movie?.overview?.slice(0, 118) + "..." || ""}
-              movieImage={`${imageBaseUrl}${movie?.poster_path || ""}`}
-            />
-          ))}
         </div>
-        <div className="button_container">
-        {currentPage < totalPages && (
-          <button onClick={handleLoadMore} className="load_more_button">
-            Load More
-          </button>
-        )}
-        </div>
+        {/* Card */}
+        <div className="list_cards">{renderCards()}</div>
+        {/* Pagination */}
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          handlePrevPage={() => handlePrevPage(currentPage, setCurrentPage)}
+          handleNextPage={() =>
+            handleNextPage(currentPage, totalPages, setCurrentPage)
+          }
+          handlePageClick={(page) => handlePageClick(page, setCurrentPage)}
+        />
       </div>
     </div>
   );

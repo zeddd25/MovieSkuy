@@ -10,6 +10,7 @@
     height:300px;
     z-index:0;
     border: 1px solid rgb(99, 99, 99);
+    background-size: contain;
 }
 
 .cards:hover {
@@ -20,6 +21,7 @@
 
 .cards__img {
     height: 300px;
+    width: 200px;
 }
 
 .cards__overlay {

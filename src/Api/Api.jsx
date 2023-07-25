@@ -3,11 +3,25 @@ const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 
 export const getMovieList = async (type, page) => {
   const movieResponse = await fetch(
-    `${baseUrl}/movie/${type}?api_key=${apiKey}&page=${page}`
+    `${baseUrl}/movie/${type}?api_key=${apiKey}&append_to_response=videos&page=${page}`
   );
   const movieData = await movieResponse.json();
-  console.log(movieData);
   return movieData;
+};
+
+export const getVideoData = async (id) => {
+  const videoDataResponse = await fetch(
+    `${baseUrl}/movie/${id}/videos?api_key=${apiKey}`
+  );
+  const videoData = await videoDataResponse.json();
+  return videoData;
+};
+
+export const getMovieDetail = async (id) => {
+  const movieDetailResponse = await fetch(`${baseUrl}/movie/${id}?api_key=${apiKey}`);
+  const movieDetailData = await movieDetailResponse.json();
+  console.log(movieDetailData);
+  return movieDetailData;
 };
 
 export const getTvShowList = async (type, page) => {
@@ -17,3 +31,25 @@ export const getTvShowList = async (type, page) => {
   const tvshowData = await tvshowResponse.json();
   return tvshowData;
 };
+
+export const getTrendingList = async (type, page, timeWindow) => {
+  const trendingResponse = await fetch(
+    `${baseUrl}/trending/${type}/${timeWindow}?api_key=${apiKey}&page=${page}`
+  );
+  const trendingData = await trendingResponse.json();
+  return trendingData;
+};
+
+// import axios from "axios";
+
+// export const getTrendingList = async (type, page, timeWindow) => {
+//   try {
+//     const response = await axios.get(
+//       `${baseUrl}/trending/${type}/${timeWindow}?api_key=${apiKey}&page=${page}`
+//     );
+//     return response.data;
+//   } catch (error) {
+//     // Handle error jika terjadi masalah saat pengambilan data dari API
+//     throw new Error("Failed to fetch trending list.");
+//   }
+// };

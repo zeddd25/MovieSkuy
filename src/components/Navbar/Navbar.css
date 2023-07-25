@@ -1,14 +1,15 @@
 .navbar {
     display: flex;
-    width: 90%;
-    padding-top: 8px;
+    max-width: 1750px;
+    width: 100%;
+    padding: 8px 10px;
     font-family: 'Outfit', sans-serif;
   }
   
   .container{
     position: absolute;
     z-index: 1;
-    width: 99%;
+    width: 100%;
 }
 
 .navbar ul {

@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import HeroBanner from "../Home/HeroBanner/HeroBanner";
 import Carousel_home from "./Carousel/Carousel_home";
 import Card_popular from "./Popular/Card_popular";
+import TrendingList from "../../components/TrendingList/TrendingList";
 
 const Home = () => {
   return (
