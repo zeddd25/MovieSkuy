@@ -8,7 +8,7 @@ const DropdownList = ({ items }) => {
       <span>
         {items.map((item) => (
           <NavLink to={item.url} className="text_dropdown" key={item.id}>
-          ▶ {item.label}
+            ▶ {item.label}
           </NavLink>
         ))}
       </span>
@@ -33,10 +33,10 @@ const Navbar = () => {
   ];
 
   const trendingItems = [
-    { id: 1, url: "/movies/now_playing", label: "Now Playing" },
-    { id: 2, url: "/movies/popular", label: "Popular" },
-    { id: 3, url: "/movies/top_rated", label: "Top Rated" },
-    { id: 4, url: "/movies/upcoming", label: "Upcoming" },
+    { id: 1, url: "/trending/all", label: "All" },
+    { id: 2, url: "/trending/movie", label: "Movie" },
+    { id: 3, url: "/trending/person", label: "Person" },
+    { id: 4, url: "/trending/tv", label: "Tv" },
   ];
 
   return (

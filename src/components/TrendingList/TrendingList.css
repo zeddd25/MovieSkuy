@@ -1,4 +1,4 @@
-.tvshow_list {
+.trending_list {
   margin-top: 100px;
   min-height: 900px;
   min-width: 90%;
@@ -11,8 +11,14 @@
   border-radius: 10px;
   margin-bottom: 50px;
 }
+.container_button_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+}
 
-.list_title {
+.trending_title {
   letter-spacing: 2px;
   font-family: "Outfit", sans-serif;
   font-weight: 500;
@@ -26,3 +32,6 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
+

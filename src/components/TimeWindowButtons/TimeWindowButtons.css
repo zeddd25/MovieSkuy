@@ -1,0 +1,27 @@
+  .time_window_buttons button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+  
+  .time_window_buttons button:hover {
+    background-color: #555;
+  }
+  
+  .time_window_buttons button.active {
+    background-color: #777;
+  }
+  
+  .time_window_buttons button:not(:last-child) {
+    margin-right: 10px;
+  }
+  
