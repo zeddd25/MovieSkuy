@@ -63,7 +63,7 @@ const MovieList = () => {
     });
   };
 
-  return (
+return (
     <div className="container">
       <Navbar />
       <div className="movie_list">

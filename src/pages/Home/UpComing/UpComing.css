@@ -1,0 +1,74 @@
+.warp_upComing {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 90%;
+  height: auto;
+  margin: auto;
+  /* background-color: burlywood; */
+  margin-top: 70px;
+}
+
+.warp_card_upcoming {
+  width: 100%;
+  height: auto;
+  /* background-color: brown; */
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10p;
+}
+
+.warp_Upcoming:hover {
+  transform: scale(1.05);
+  transition: 200ms;
+}
+
+.warp_Upcoming {
+  width: 405px;
+  height: auto;
+  /* background-color: rgb(72, 255, 0); */
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-top: 25px;
+}
+
+.posterImage__titleHome {
+  width: 85px;
+  height: 110px;
+  overflow: hidden;
+  object-fit: cover;
+  /* background-color: aqua; */
+  border-radius: 7px;
+}
+
+.posterImage__titleHome_chill {
+  width: 90px;
+  height: 100%;
+}
+
+.warp_jdl_tgl {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* background-color: rgb(211, 161, 97); */
+}
+
+.judul_upcoming1 {
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  /* background-color: rgb(50, 91, 78); */
+}
+
+.tanggal_tayang1 {
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  /* background-color: rgb(55, 74, 158); */
+}
