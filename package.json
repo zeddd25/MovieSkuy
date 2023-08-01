@@ -14,12 +14,16 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.4.0",
+    "movie-trailer": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-loading-skeleton": "^3.3.1",
+    "react-player": "^2.12.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.14.1",
-    "react-youtube": "^10.1.0"
+    "react-slick": "^0.29.0",
+    "react-youtube": "^10.1.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

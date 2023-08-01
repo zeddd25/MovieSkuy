@@ -61,9 +61,12 @@ const TrendingList = () => {
         media_type,
       } = trending;
 
+      const isMovie = media_type === "movie";
+
       return (
         <Suspense fallback={<CardLoader />} key={i}>
           <Cards
+              LinkTo={isMovie ? `/movie/detail/${trending.id}` : `/tvshow/detail/${trending.id}`}
             movie={trending}
             movieTitle={original_title || original_name}
             movieRelese={release_date || first_air_date || known_for_department}

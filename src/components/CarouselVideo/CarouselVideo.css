@@ -1,0 +1,38 @@
+.carousel_video {
+  max-width: 400px; /* Adjust the max-width as needed */
+  margin: auto; /* Center the carousel */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.carousel_video_preview {
+  margin: 10px; /* Add margin to create spacing between thumbnails */
+  display: flex;
+  justify-content: center;
+}
+
+.carousel_video_preview img {
+    max-width: 90px;
+    border-radius: 10px; /* Add a border radius for rounded corners */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 40px 6px;
+}
+
+.slick-dots.slick-thumb {
+  position: relative; /* Make the dots container relative */
+  bottom: -3px; /* Adjust the bottom position as needed */
+}
+
+.slick-dots.slick-thumb li {
+  margin: 0 40px; /* Add some spacing between the dots */
+}
+
+.carousel_video iframe {
+  border-radius: 10px; /* Add border radius */
+  width: 100%; /* Set the width of the video */
+  height: 258px; /* Set the height of the video */
+}
+
+.slick-slider slick-initialized {
+  margin: auto;
+}

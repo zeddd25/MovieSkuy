@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import CardLoader from "../../utils/CardLoader";
 import { getImageUrlPoster } from "../../utils/ImageUtils";
 import Pagination from "../Pagination/Pagination";
-import { fetchMovieData, fetchVideoData } from "../../utils/ApiUtils";
+import { fetchMovieData } from "../../utils/ApiUtils";
 import {
   handleNextPage,
   handlePageClick,
@@ -51,7 +51,7 @@ const MovieList = () => {
       return (
         <Suspense fallback={<CardLoader />} key={i}>
           <Cards
-            movie={movie}
+            LinkTo={`/movie/detail/${movie.id}`}
             movieTitle={original_title || ""}
             movieRelese={release_date || ""}
             movieRating={vote_average || ""}
@@ -63,17 +63,21 @@ const MovieList = () => {
     });
   };
 
-return (
+  return (
     <div className="container">
       <Navbar />
       <div className="movie_list">
-        {/* Button-Title */}
-        <div className="container_button_title">
-        <h2 className="list_title">{type ? type.toUpperCase() : "POPULAR"}</h2>
+        <div className="list_cards">
+          {/* MOVIE LIST NAME */}
+          <div className="wrap_list_title">
+            <h2 className="list_title">
+              {type ? type.toUpperCase() : "POPULAR"}
+            </h2>
+          </div>
+          {/* CARD */}
+          <div className="wrap_card">{renderCards()}</div>
         </div>
-        {/* Card */}
-        <div className="list_cards">{renderCards()}</div>
-        {/* Pagination */}
+        {/*  */}
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}

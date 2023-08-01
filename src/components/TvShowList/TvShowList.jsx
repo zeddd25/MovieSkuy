@@ -25,7 +25,10 @@ const TvShowList = () => {
   }, [type]);
 
   useEffect(() => {
-    fetchTvShowData(type, currentPage, setTvShowList, setTotalPages); // Use the fetchData function here
+    async function fetchData() {
+      await fetchTvShowData(type, currentPage, setTvShowList, setTotalPages);
+    }
+    fetchData();
   }, [type, currentPage]);
 
   // Ketika currentPage berubah, reset tvShowList untuk menghindari data yang berkumpul
@@ -34,6 +37,10 @@ const TvShowList = () => {
   }, [currentPage]);
 
   const renderCards = () => {
+    if (!tvShowList) {
+      return null; // Tampilkan konten lain atau pesan loading jika tvShowList masih null/undefined
+    }
+  
     return tvShowList.map((tvshow, i) => {
       const {
         original_name,
@@ -42,11 +49,11 @@ const TvShowList = () => {
         overview,
         poster_path,
       } = tvshow;
-
+  
       return (
-        <Suspense fallback={<CardLoader />} key={i}>
+        <Suspense key={i} fallback={<CardLoader />}>
           <Cards
-            movie={tvshow}
+            LinkTo={`/tvshow/detail/${tvshow.id}`}
             movieTitle={original_name || ""}
             movieRelese={first_air_date || ""}
             movieRating={vote_average || ""}
@@ -65,7 +72,8 @@ const TvShowList = () => {
         {/* Button-Title */}
         <div className="container_button_title">
           <h2 className="list_title">
-            {type ? type.toUpperCase() : "POPULAR"}</h2>
+            {type ? type.toUpperCase() : "POPULAR"}
+          </h2>
         </div>
         {/* Card */}
         <div className="list_cards">{renderCards()}</div>
