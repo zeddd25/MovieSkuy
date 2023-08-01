@@ -17,7 +17,7 @@ const Carousel_home = () => {
 
   return (
     <>
-      <div className="posterHome">
+      <div className="">
         <Carousel
           showThumbs={false}
           autoPlay={true}
@@ -27,8 +27,8 @@ const Carousel_home = () => {
           showArrows={false}
           showIndicators={true}
         >
-          {popularMovies.map((movie) => (
-            <div className="warp_carousel">
+          {popularMovies.map((movie, i) => (
+            <div className="warp_carousel" key={i}>
               <span className="posterImage_"></span>
               <div className="posterImage">
                 <img

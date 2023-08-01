@@ -8,7 +8,7 @@ const DropdownList = ({ items }) => {
       <span>
         {items.map((item) => (
           <NavLink to={item.url} className="text_dropdown" key={item.id}>
-            ▶ {item.label}
+            ▶{item.label}
           </NavLink>
         ))}
       </span>

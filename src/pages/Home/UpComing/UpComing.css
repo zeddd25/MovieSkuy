@@ -1,74 +1,338 @@
-.warp_upComing {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 90%;
-  height: auto;
-  margin: auto;
-  /* background-color: burlywood; */
-  margin-top: 70px;
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  .warp_upComing_c {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+    margin: auto;
+    /* background-color: burlywood; */
+  }
+
+  .warp_hr_judul1 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* background-color: rgb(28, 100, 103); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Judul_warp_Up {
+    position: relative;
+    /* z-index: 1; */
+    width: 140px;
+    height: 30px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .gradient {
+    position: absolute;
+    z-index: -1;
+    left: 37%;
+    width: 40px; /* Sesuaikan lebar sesuai kebutuhan */
+    height: 20px; /* Sesuaikan tinggi sesuai kebutuhan */
+    background-color: #5ba9d4; /* Ganti dengan warna biru yang diinginkan */
+  }
+
+  .text_judul {
+    position: relative; /* Tetapkan posisi menjadi relative */
+    z-index: 2; /* Pastikan card tampil di atas shape */
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border-top: 1px solid #58a9d8;
+    background-color: rgba(173, 173, 173, 0.26);
+    backdrop-filter: blur(30px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    font-size: 16px;
+    justify-content: center;
+  }
+
+  .garis {
+    margin: 0;
+    width: 42%;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid;
+    /* background-color: antiquewhite; */
+  }
+
+  .warp_card_upcoming {
+    width: 100%;
+    height: auto;
+    /* background-color: brown; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 17px;
+    /* padding-top: 10p; */
+  }
+
+  .warp_Upcoming:hover {
+    transform: scale(1.05);
+    transition: 200ms;
+  }
+
+  .warp_Upcoming {
+    width: 23%;
+    height: 100px;
+    background-color: #2d223a94;
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.341);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* padding-top: 25px; */
+    padding: 5px;
+    border-radius: 7px;
+  }
+
+  .posterImage__titleHome {
+    width: 80px;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    /* background-color: aqua; */
+    border-radius: 5px;
+  }
+
+  .posterImage__titleHome_chill {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .warp_jdl_tgl {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* background-color: rgb(211, 161, 97); */
+  }
+
+  .judul_upcoming1 {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    /* background-color: rgb(50, 91, 78); */
+  }
+
+  .tanggal_tayang1 {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    /* background-color: rgb(55, 74, 158); */
+  }
+
+  .warp_up_Info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    /* background-color: #16bc0e; */
+  }
+
+  #icons2 {
+    color: rgba(255, 255, 255, 0.527);
+    font-size: 15px;
+  }
+
+  .warp_up_subInfo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 5px;
+    /* background-color: blueviolet; */
+  }
+
+  .tanggal_tayang1 {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    /* background-color: rgb(55, 74, 158); */
+  }
 }
 
-.warp_card_upcoming {
-  width: 100%;
-  height: auto;
-  /* background-color: brown; */
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 10p;
-}
+@media screen and (min-width: 1368px) and (max-width: 6400px) {
+  .warp_upComing_c {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: auto;
+    /* background-color: burlywood; */
+  }
 
-.warp_Upcoming:hover {
-  transform: scale(1.05);
-  transition: 200ms;
-}
+  .warp_hr_judul1 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* background-color: rgb(28, 100, 103); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.warp_Upcoming {
-  width: 405px;
-  height: auto;
-  /* background-color: rgb(72, 255, 0); */
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  padding-top: 25px;
-}
+  .Judul_warp_Up {
+    position: relative;
+    /* z-index: 1; */
+    width: 140px;
+    height: 30px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
-.posterImage__titleHome {
-  width: 85px;
-  height: 110px;
-  overflow: hidden;
-  object-fit: cover;
-  /* background-color: aqua; */
-  border-radius: 7px;
-}
+  .gradient {
+    position: absolute;
+    z-index: -1;
+    left: 35%;
+    width: 40px; /* Sesuaikan lebar sesuai kebutuhan */
+    height: 15px; /* Sesuaikan tinggi sesuai kebutuhan */
+    background-color: #16bc0e; /* Ganti dengan warna biru yang diinginkan */
+  }
 
-.posterImage__titleHome_chill {
-  width: 90px;
-  height: 100%;
-}
+  .text_judul {
+    position: relative; /* Tetapkan posisi menjadi relative */
+    z-index: 2; /* Pastikan card tampil di atas shape */
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border-top: 1px solid #16bc0e;
+    background-color: rgba(173, 173, 173, 0.26);
+    backdrop-filter: blur(30px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    font-size: 16px;
+    justify-content: center;
+  }
 
-.warp_jdl_tgl {
-  width: 260px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  /* background-color: rgb(211, 161, 97); */
-}
+  .garis {
+    margin: 0;
+    width: 42%;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid #16bc0e;
+    /* background-color: antiquewhite; */
+  }
 
-.judul_upcoming1 {
-  margin: 0;
-  padding: 0;
-  color: aliceblue;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  /* background-color: rgb(50, 91, 78); */
-}
+  .warp_card_upcoming {
+    width: 100%;
+    height: auto;
+    /* background-color: brown; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 21px;
+    /* padding-top: 10p; */
+  }
 
-.tanggal_tayang1 {
-  margin: 0;
-  padding: 0;
-  color: aliceblue;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 12px;
-  /* background-color: rgb(55, 74, 158); */
+  .warp_Upcoming:hover {
+    transform: scale(1.05);
+    transition: 200ms;
+  }
+
+  .warp_Upcoming {
+    width: 23%;
+    height: 120px;
+    background-color: #2d223a94;
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.341);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* padding-top: 25px; */
+    padding: 5px;
+    border-radius: 7px;
+  }
+
+  .posterImage__titleHome {
+    width: 80px;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    /* background-color: aqua; */
+    border-radius: 5px;
+  }
+
+  .posterImage__titleHome_chill {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .warp_jdl_tgl {
+    width: 260px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 10px;
+    /* background-color: rgb(211, 161, 97); */
+  }
+
+  .judul_upcoming1 {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    /* background-color: rgb(50, 91, 78); */
+  }
+
+  .warp_up_Info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    /* background-color: #16bc0e; */
+  }
+
+  #icons2 {
+    color: rgba(255, 255, 255, 0.527);
+    font-size: 15px;
+  }
+
+  .warp_up_subInfo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 5px;
+    /* background-color: blueviolet; */
+  }
+
+  .tanggal_tayang1 {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    /* background-color: rgb(55, 74, 158); */
+  }
 }
