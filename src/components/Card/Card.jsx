@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import DefaultImage from "../../assets/images/ghost.gif"; 
 
 const Card = ({
-  movie,
+  LinkTo,
   movieImage,
   movieTitle,
   movieRelese,
@@ -18,7 +18,7 @@ const Card = ({
   return (
     <div className="cards">
       <Link
-        to={`/movie/${movie.id}`}
+        to={LinkTo}
         style={{ textDecoration: "none", color: "white" }}
       >
         <img

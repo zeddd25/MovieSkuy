@@ -16,7 +16,10 @@ const Home = () => {
         <div className="content">
           <Navbar />
           <HeroBanner />
+
+
           <TopRated />
+
           {/* <Card_popular /> */}
           <hr className="garis1" />
           {/* <Card_popular /> */}

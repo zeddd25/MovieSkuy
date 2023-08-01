@@ -1,4 +1,4 @@
-.movie {
+.tvshow {
   max-width: 1500px;
   width: 100%;
   margin: auto;
@@ -9,21 +9,21 @@
   font-family: 'Outfit', sans-serif;
 }
 
-.movie_intro {
+.tvshow_intro {
   width: 100%;
   position: relative;
   box-shadow: rgba(0, 0, 0, 10) 0px 100px 100px 50px;
 
 }
 
-.movie_backdrop {
+.tvshow_backdrop {
   width: 100%;
   height: 600px;
   object-fit: cover;
   object-position: 0 35%;
 }
 
-.movie_intro::before {
+.tvshow_intro::before {
   content: "";
   position: absolute;
   top: 0;
@@ -38,7 +38,7 @@
   );
 }
 
-.movie_detail {
+.tvshow_detail {
   align-items: center;
   width: 83%;
   display: flex;

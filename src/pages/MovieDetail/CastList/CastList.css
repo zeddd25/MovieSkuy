@@ -1,0 +1,39 @@
+.movie_cast {
+  width: 100%;
+  color: #dcdcdc;
+  margin-top: 25px;
+}
+
+.title_cast {
+  max-width: max-content;
+  padding: 0px 10px;
+  border-left: 4px solid #16BC0E;
+}
+
+.cast_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 96px;
+}
+
+.cast_profile {
+  border-radius: 100px;
+  width: 96px;
+  height: 100%;
+  /* object-position: 0 10%; */
+  object-fit: cover;
+}
+
+.cast_name {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  margin-bottom: 0;
+}
+
+.cast_character {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 0;
+}
