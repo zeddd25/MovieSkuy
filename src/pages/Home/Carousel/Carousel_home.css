@@ -1,85 +1,180 @@
-.poster {
-  /* background-color: aqua; */
-}
-.warp_carousel {
-  text-decoration: none;
-  color: aliceblue;
-  max-width: 90%;
-  background-color: rgb(26, 26, 26);
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: end;
-  overflow: hidden;
-  border-radius: 20px;
-  margin: auto;
-  margin-top: 50px;
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  .posterHome {
+    background-color: aqua;
+    margin: 0;
+  }
+  .warp_carousel {
+    text-decoration: none;
+    color: aliceblue;
+    max-width: 100%;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: end;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: auto;
+    /* margin-top: 50px; */
+  }
+
+  .posterImage {
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+    opacity: 40%;
+  }
+
+  /* Text style */
+  .posterImage__overlay {
+    position: absolute;
+    z-index: 10;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* justify-content: center; */
+    padding-top: 50px;
+    /* background-color: aqua; */
+  }
+
+  /* ________rate & date________ */
+  .posterImage__runtime {
+    width: 95%;
+    text-align: left;
+    display: flex;
+    gap: 20px;
+  }
+
+  .posterImage__date {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: rgba(0, 0, 0, 0.346);
+    backdrop-filter: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.623);
+    border-radius: 5px;
+  }
+
+  .posterImage__rating {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: rgba(0, 0, 0, 0.346);
+    backdrop-filter: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.623);
+    border-radius: 5px;
+  }
+  /* _________________ */
+
+  .posterImage__title {
+    font-size: 60px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    text-align: left;
+    /* background-color: blueviolet; */
+    padding: 0;
+    margin: 0;
+  }
+
+  .posterImage__description {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    width: 60%;
+    text-align: left;
+    font-size: 19px;
+    color: rgb(192, 192, 192);
+    /* background-color: blueviolet; */
+  }
 }
 
-.posterImage {
-  width: 100%;
-  height: 700px;
-  border-radius: 20px;
-  opacity: 40%;
-}
+@media screen and (min-width: 1368px) and (max-width: 6400px) {
+ 
+  .warp_carousel {
+    text-decoration: none;
+    color: aliceblue;
+    max-width: 100%;
+    background-color: rgb(26, 26, 26);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: end;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: auto;
+    /* margin-top: 50px; */
+  }
 
-/* Text style */
-.posterImage__overlay {
-  position: absolute;
-  z-index: 10;
-  width: 95%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  /* justify-content: center; */
-  padding-top: 90px;
-  /* background-color: aqua; */
-}
+  .posterImage {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    opacity: 40%;
+  }
 
-/* ________rate & date________ */
-.posterImage__runtime {
-  width: 95%;
-  text-align: left;
-  display: flex;
-  gap: 20px;
-}
+  /* Text style */
+  .posterImage__overlay {
+    position: absolute;
+    z-index: 10;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* justify-content: center; */
+    padding-top: 50px;
+    /* background-color: aqua; */
+  }
 
-.posterImage__date {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  background-color: rgba(0, 0, 0, 0.346);
-  backdrop-filter: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.623);
-  border-radius: 5px;
-}
+  /* ________rate & date________ */
+  .posterImage__runtime {
+    width: 95%;
+    text-align: left;
+    display: flex;
+    gap: 20px;
+  }
 
-.posterImage__rating {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  background-color: rgba(0, 0, 0, 0.346);
-  backdrop-filter: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.623);
-  border-radius: 5px;
-}
-/* _________________ */
+  .posterImage__date {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: rgba(0, 0, 0, 0.346);
+    backdrop-filter: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.623);
+    border-radius: 5px;
+  }
 
-.posterImage__title {
-  font-size: 100px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bolder;
-  text-align: left;
-}
+  .posterImage__rating {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: rgba(0, 0, 0, 0.346);
+    backdrop-filter: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.623);
+    border-radius: 5px;
+  }
+  /* _________________ */
 
-.posterImage__description {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  width: 60%;
-  text-align: left;
-  font-size: 25px;
-  color: rgb(192, 192, 192);
-  /* background-color: blueviolet; */
+  .posterImage__title {
+    font-size: 60px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    text-align: left;
+    /* background-color: blueviolet; */
+    padding: 0;
+    margin: 0;
+  }
+
+  .posterImage__description {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    width: 60%;
+    text-align: left;
+    font-size: 19px;
+    color: rgb(192, 192, 192);
+    /* background-color: blueviolet; */
+  }
 }

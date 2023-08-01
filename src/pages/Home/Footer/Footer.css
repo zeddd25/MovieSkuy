@@ -1,9 +1,23 @@
 .warp_footer {
-  max-width: 1800px;
+  width: 100%;
   height: auto;
   background-color: #151424;
+  /* background-color: #1408c3; */
+  /* margin: auto; */
   margin-top: 100px;
   border-top: 1px solid rgba(255, 255, 255, 0.237);
+}
+
+.max_footer_w {
+  max-width: 1500px;
+  margin: auto;
+
+  /* background-color: rgb(135, 222, 218); */
+}
+
+.padding_footer {
+  position: relative;
+  padding: 0px 45px !important;
 }
 
 .garis-vertikal {
@@ -13,7 +27,8 @@
 }
 
 .Warp_Desc_weDev {
-  max-width: 1630px;
+  margin: auto;
+  max-width: 100%;
   height: 100px;
   /* background-color: blueviolet; */
   margin: auto;
@@ -23,7 +38,7 @@
 }
 
 .logo {
-  width: 15%;
+  width: 170px;
   height: auto;
   /* background-color: blue; */
   display: flex;
@@ -45,7 +60,7 @@
 }
 
 .about {
-  width: 50%;
+  width: 1160px;
   /* background-color: rgb(46, 46, 80); */
   display: flex;
   align-items: center;
@@ -91,7 +106,7 @@
 }
 
 .akun {
-  width: 440px;
+  width: 270px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,8 +134,9 @@
 }
 
 .copyRight {
-  /* background-color: rgb(19, 34, 34); */
-  max-width: 1280px;
+  /* background-color: rgb(103, 147, 147); */
+  margin: auto;
+  max-width: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -128,6 +144,4 @@
   border-top: 1px solid rgba(255, 255, 255, 0.237);
   color: aliceblue;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
-  /* background-color: aqua; */
 }
