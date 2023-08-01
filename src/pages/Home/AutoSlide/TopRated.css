@@ -1,0 +1,79 @@
+.warp_All_TopRated {
+  position: sticky;
+  width: 100%;
+  height: 220px;
+  /* background-color: chartreuse; */
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.warp_card_TopRated {
+  width: 100%;
+  height: 200px;
+  /* background-color: darkcyan; */
+  display: flex;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.card_TopRated {
+  width: 23.94%;
+  height: 180px;
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: relative;
+}
+
+.titile_top {
+  width: 100%;
+  height: 100%;
+  color: aliceblue;
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  align-items: end;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+.titile_top p {
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.randomColor {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  opacity: 50%;
+  border-radius: 15px;
+  /* background-color: transparent; */
+}
+
+/* style={{
+                    backgroundImage: `linear-gradient(to right, ${getRandomColor()}, ${getRandomColor()})`,
+                  }} */
+
+.posterImage__titleHome2 {
+  position: relative;
+  width: 400px;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  /* background-color: transparent; */
+  border-radius: 15px;
+}
+
+.posterImage__titleHome_chill2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}

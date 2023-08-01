@@ -7,6 +7,7 @@ import TrendingList from "../../components/TrendingList/TrendingList";
 import UpComing from "./UpComing/UpComing";
 import Footer from "./Footer/Footer";
 import CardHomeNew from "../../components/CardHome/CardHomeNew";
+import TopRated from "./AutoSlide/TopRated";
 
 const Home = () => {
   return (
@@ -15,6 +16,10 @@ const Home = () => {
         <div className="content">
           <Navbar />
           <HeroBanner />
+
+
+          <TopRated />
+
           {/* <Card_popular /> */}
           <hr className="garis1" />
           {/* <Card_popular /> */}
