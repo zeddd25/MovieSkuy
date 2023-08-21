@@ -97,13 +97,21 @@ export const fetchtvshowDetail = async (id, setTvshowDetail) => {
   }
 };
 
+// apiUtils.jsx
+// Define the getTvVideoData function to fetch TV show video data
+
+
+// Modify fetchTvVideoData to fetch TV show video data correctly
 export const fetchTvVideoData = async (id, setTvDataVideo) => {
-  const TvVideoData = await getTvVideoData(id);
-  setTvDataVideo(TvVideoData.results.splice(0, 4));
+  try {
+    const tvVideoData = await getTvVideoData(id);
+    setTvDataVideo(tvVideoData.results.slice(0, 4));
+  } catch (error) {
+    console.error("Error fetching TV show video data:", error);
+  }
 };
 
-
-const API_KEY = "a7a276360f82d61084bcdb311cb45b7e"; // Ganti dengan API key Anda
+const API_KEY = "a7a276360f82d61084bcdb311cb45b7e";
 
 const searchMoviesAndTvShows = async (searchQuery, setSearchResults) => {
   try {

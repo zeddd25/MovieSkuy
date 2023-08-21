@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import DefaultImage from "../../../assets/images/ghost.gif"; 
+
 
 const CastList = () => {
   const [movieCast, setMovieCast] = useState([]);
@@ -22,6 +24,10 @@ const CastList = () => {
     slidesToScroll: 2,
   };
 
+  const handleImageError = (e) => {
+    e.target.src = DefaultImage; 
+  };
+
   return (
     <div className="movie_cast">
       <div className="title_cast">
@@ -35,7 +41,8 @@ const CastList = () => {
               <img
                 className="cast_profile"
                 src={`https://image.tmdb.org/t/p/w200${cast.profile_path}`}
-                alt="https://fakeimg.pl/640x360"
+                loading="lazy"
+                onError={handleImageError}
               />
               {/*  */}
               <div className="wrap_cast">

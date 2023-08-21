@@ -1,21 +1,23 @@
 .carousel_video {
   max-width: 400px; /* Adjust the max-width as needed */
+  height: 370px;
   margin: auto; /* Center the carousel */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .carousel_video_preview {
   margin: 10px; /* Add margin to create spacing between thumbnails */
   display: flex;
   justify-content: center;
+  background-color: bisque;
+  background-color: chartreuse;
 }
 
 .carousel_video_preview img {
-    max-width: 90px;
-    border-radius: 10px; /* Add a border radius for rounded corners */
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 40px 6px;
+  max-width: 90px;
+  border-radius: 10px; /* Add a border radius for rounded corners */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 40px 6px;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .slick-dots.slick-thumb {

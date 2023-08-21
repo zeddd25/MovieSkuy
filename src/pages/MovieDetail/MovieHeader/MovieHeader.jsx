@@ -36,7 +36,7 @@ const MovieHeader = ({ movieDetail, officialTrailer, onWatchTrailerClick }) => {
           ))}
         </div>
         <div>
-          <p className="overview_text">{movieDetail.overview} </p>
+          <p className="overview_text">{movieDetail.overview?.slice(0, 280) + "..." || ""} </p>
           {officialTrailer && (
             <button className="button_trailer" onClick={onWatchTrailerClick}>
               <FontAwesomeIcon icon={faPlay} />

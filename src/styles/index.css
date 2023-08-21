@@ -1,6 +1,9 @@
+* {
+  font-family: "Outfit", sans-serif;
+}
+
 .text {
   font-size: 24px;
-  font-family: Arial, Helvetica, sans-serif;
   color: aqua;
 }
 

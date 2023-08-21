@@ -66,7 +66,11 @@ const TrendingList = () => {
       return (
         <Suspense fallback={<CardLoader />} key={i}>
           <Cards
-              LinkTo={isMovie ? `/movie/detail/${trending.id}` : `/tvshow/detail/${trending.id}`}
+            LinkTo={
+              isMovie
+                ? `/movie/detail/${trending.id}`
+                : `/tvshow/detail/${trending.id}`
+            }
             movie={trending}
             movieTitle={original_title || original_name}
             movieRelese={release_date || first_air_date || known_for_department}
@@ -87,19 +91,28 @@ const TrendingList = () => {
     <div className="container">
       <Navbar />
       <div className="trending_list">
-        {/* Button-Title */}
+      <div className="list_cards">
         <div className="container_button_title">
-          <h2 className="trending_title">
-            {type ? type.toUpperCase() : "ALL"}
-          </h2>
-          {/* Button switch for time window */}
+        {/* TRENDINGLIST LIST NAME */}
+        <div className="warp_hr_judul1">
+            <hr className="garis" />
+            <div className="Judul_warp_Up">
+              <div className="text_judul">{type ? type.toUpperCase() : "POPULAR"}</div>
+              <div className="gradient"></div>
+            </div>
+            <hr className="garis" />
+          </div>
+          {/* BUTTON TIME WINDOW */}
+          <div className="wrap_button_time">
           <TimeWindowButtons
             timeWindow={timeWindow}
             handleTimeWindowChange={handleTimeWindowChange}
           />
+          </div>
         </div>
         {/* Card */}
-        <div className="list_cards">{renderCards()}</div>
+        <div className="wrap_card">{renderCards()}</div>
+        </div>
         {/* Pagination */}
         <Pagination
           currentPage={currentPage}
