@@ -40,7 +40,7 @@ const TvShowList = () => {
     if (!tvShowList) {
       return null; // Tampilkan konten lain atau pesan loading jika tvShowList masih null/undefined
     }
-  
+
     return tvShowList.map((tvshow, i) => {
       const {
         original_name,
@@ -49,7 +49,7 @@ const TvShowList = () => {
         overview,
         poster_path,
       } = tvshow;
-  
+
       return (
         <Suspense key={i} fallback={<CardLoader />}>
           <Cards
@@ -69,14 +69,21 @@ const TvShowList = () => {
     <div className="container">
       <Navbar />
       <div className="tvshow_list">
-        {/* Button-Title */}
-        <div className="container_button_title">
-          <h2 className="list_title">
-            {type ? type.toUpperCase() : "POPULAR"}
-          </h2>
+      <div className="list_cards">
+        {/* TVSHOW LIST NAME */}
+        <div className="warp_hr_judul1">
+          <hr className="garis" />
+          <div className="Judul_warp_Up">
+            <div className="text_judul">
+              {type ? type.toUpperCase() : "POPULAR"}
+            </div>
+            <div className="gradient"></div>
+          </div>
+          <hr className="garis" />
         </div>
         {/* Card */}
-        <div className="list_cards">{renderCards()}</div>
+        <div className="wrap_card">{renderCards()}</div>
+        </div>
         {/* Pagination */}
         <Pagination
           currentPage={currentPage}

@@ -30,10 +30,9 @@
   padding: 0px 45px !important;
   display: flex;
   flex-direction: column;
-  gap: 35px;
   /* background-color: burlywood; */
   /* margin-right: 0 !important; */
-}
+  }
 
 @media screen and (min-width: 768px) and (max-width: 1366px) {
   .Home_warp_max {

@@ -1,14 +1,23 @@
-.movie_list {
+.wrap_movielist {
   max-width: 1500px;
-  min-height: 950px;
-  width: 100%;
   margin: auto;
+  min-height: fit-content;
+  min-height: 100vh;
+  height: auto;
+  box-sizing: border-box;
+  background-color: #151424;
+}
+
+.movie_list {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0px 45px !important;
   justify-content: space-between;
-  border: solid 1px rgba(255, 255, 255, 0.1);
+  /* background-color: bisque; */
+  /* border: solid 1px rgba(255, 255, 255, 0.1); */
+  box-sizing: border-box;
 }
 
 .list_title {
@@ -29,8 +38,71 @@
   margin-top: 100px;
 }
 
+.parent_wrap_card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 1360px;
+}
+
 .wrap_card {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  /* gap: 27.7px; */
+}
+
+.warp_movielist_title {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movielist_line {
+  margin: 0;
+  width: 43%;
+  height: 25px;
+  border: none;
+  border-bottom: 1px solid #16bc0e;
+  border-radius: 5px 5px 0 0;
+}
+
+.movielist_title {
+  position: relative;
+  width: 140px;
+  height: 30px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.movielist_gradient {
+  position: absolute;
+  left: 35%;
+  width: 45px; /* Sesuaikan lebar sesuai kebutuhan */
+  height: 40px; /* Sesuaikan tinggi sesuai kebutuhan */
+  background-color: #16bc0e;
+}
+
+.movielist_text {
+  position: relative;
+  z-index: 2; /* Pastikan card tampil di atas shape */
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  color: white;
+  border-top: 1px solid #16bc0e;
+  background-color: rgba(173, 173, 173, 0.26);
+  border-radius: 0 0 5px 5px;
+  backdrop-filter: blur(30px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  font-size: 16px;
+  justify-content: center;
 }

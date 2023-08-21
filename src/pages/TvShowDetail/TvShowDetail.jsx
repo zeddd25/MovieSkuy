@@ -6,6 +6,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import { getImageUrl } from "../../utils/ImageUtils";
 import TvShowHeader from "./TvShowHeader/TvShowHeader";
 import VideoPopup from "../../components/VideoPopup/VideoPopup";
+import MovieDetailRight from "../MovieDetail/MovieDetailRight/MovieDetailRight";
 
 const TvShowDetail = () => {
   const { id } = useParams();
@@ -29,14 +30,14 @@ const TvShowDetail = () => {
     setShowVideoPopup(false);
   };
 
-  console.log( "VIDEO NYA", videoData);
+  console.log("VIDEO NYA", videoData);
 
   return (
     <>
       <div className="tvshow">
-    <Navbar />
         {/* TVSHOW INTRO BACKDROP */}
         <div className="tvshow_intro">
+          <Navbar />
           <img
             className="tvshow_backdrop"
             src={getImageUrl(tvShowDetail?.backdrop_path || "")}
@@ -60,7 +61,7 @@ const TvShowDetail = () => {
           )}
           {/* TVSHOW CAROUSEL VIDEO */}
           <div>
-            <h1>BELUM DIBUAT</h1>
+            <MovieDetailRight tvShowId={id} />
           </div>
         </div>
       </div>

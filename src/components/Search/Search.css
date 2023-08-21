@@ -1,6 +1,7 @@
 .warp_search_results {
   position: relative;
   height: 100%;
+  padding-bottom: 25px;
 }
 
 .warp_search {

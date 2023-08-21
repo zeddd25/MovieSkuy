@@ -1,11 +1,11 @@
-.wrap_navbar {
+.wrap_navbar_home {
   position: relative;
-  max-width: 1500px;
   width: 90%;
+  max-width: 1500px;
   margin: auto;
 }
 
-.navbar {
+.navbar_home {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -13,17 +13,16 @@
   gap: 10px;
   width: 100%;
   height: 60px;
+  font-family: "Outfit", sans-serif;
   z-index: 10;
 }
 
-.navbar .menu_drop {
+.navbar_home .menu_drop {
   display: flex;
   gap: 50px;
   color: white;
   font-size: 18px;
   font-weight: bold;
-  /* padding-right: 70px; */
-  /* background-color: #16bc0e; */
 }
 
 .movie-list {
@@ -31,23 +30,25 @@
   font-weight: 400;
   letter-spacing: 0.5px;
   cursor: pointer;
+  /* padding-right: 20px; */
 }
 
-.list_dropdown {
+.dropdown_list {
   top: 100%;
   display: none;
   position: absolute;
+  border-radius: 5px;
   transition: opacity 1s ease;
 }
 
-.list_dropdown span {
+.dropdown_list span {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 2px;
+  padding: 10px;
   padding-left: 0%;
 }
-.movie-list:hover .list_dropdown {
+.movie-list:hover .dropdown_list {
   display: block;
 }
 
@@ -64,16 +65,14 @@
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  width: 99px;
 }
 
 .logo img {
   height: 35px;
 }
 
-.movie-list:hover .list_dropdown {
-  width: 100px;
+.movie-list:hover .dropdown_list {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -85,56 +84,6 @@
   border-radius: 5px;
   animation: fadeIn 0.5s ease-in-out;
   z-index: 10;
-}
-
-.wrap_search {
-  display: flex;
-  align-items: center;
-  max-width: 600px;
-  width: 100%;
-  height: 40px;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.176);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(227, 227, 227, 0.65);
-}
-
-.wrap_search.focused {
-  border-color: #16bc0e;
-}
-
-.search_bar {
-  width: 100%;
-  border-radius: 20px;
-}
-
-.search_bar input {
-  width: 98%;
-  padding-left: 15px;
-  flex: 1;
-  border-radius: 5px;
-  height: 40px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: white;
-}
-
-.wrap_icon {
-  width: 40px;
-  /* height: auto; */
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.search_icon {
-  font-size: 18px;
-  color: white;
-}
-
-.search_icon:hover {
-  color: #16bc0e;
 }
 
 .text_dropdown {
@@ -158,8 +107,6 @@
 }
 
 .logo {
-  height: auto;
-  width: min-content;
   text-decoration: none;
   color: white;
   transition: color 0.2s ease-in-out;
@@ -170,7 +117,7 @@
 }
 
 .logo img {
-  height: 20px;
+  height: 35px;
   transition: filter 0.2s ease-in-out;
 }
 

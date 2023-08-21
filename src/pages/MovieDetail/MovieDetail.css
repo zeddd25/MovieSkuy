@@ -1,29 +1,36 @@
 .movie {
   max-width: 1500px;
+  min-height: 100vh;
   width: 100%;
   margin: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Outfit', sans-serif;
+  justify-content: space-between;
+  background-color: #151424;
+  padding: 0px 45px !important;
+  box-sizing: border-box;
 }
 
 .movie_intro {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  box-shadow: rgba(0, 0, 0, 10) 0px 100px 100px 50px;
-
 }
 
 .movie_backdrop {
   width: 100%;
-  height: 600px;
-  object-fit: cover;
-  object-position: 0 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 4) 0px 10px 100px 50px;
+  position: relative;
 }
 
-.movie_intro::before {
+.movie_backdrop::before {
   content: "";
   position: absolute;
   top: 0;
@@ -38,13 +45,18 @@
   );
 }
 
+.movie_backdrop img {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 35%;
+}
+
 .movie_detail {
-  align-items: center;
-  width: 83%;
+  width: 90%;
+  /* background-color: aqua; */
   display: flex;
   justify-content: space-between;
   position: relative;
   bottom: 225px;
 }
-
-

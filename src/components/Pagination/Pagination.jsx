@@ -18,7 +18,7 @@ const Pagination = ({ currentPage, totalPages, handlePrevPage, handleNextPage, h
       </div>
 
       <div className="page_numbers">
-      {pageNumbers.slice(currentPage - 1, currentPage + 19).map((page) => (
+      {pageNumbers.slice(currentPage - 1, currentPage + 14).map((page) => (
         <button
           key={page}
           onClick={() => handlePageClick(page)}

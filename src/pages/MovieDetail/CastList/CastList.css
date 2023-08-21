@@ -1,13 +1,16 @@
 .movie_cast {
   width: 100%;
   color: #dcdcdc;
-  margin-top: 25px;
+  /* margin-top: 25px; */
 }
 
 .title_cast {
   max-width: max-content;
-  padding: 0px 10px;
-  border-left: 4px solid #16BC0E;
+  border-left: 4px solid #16bc0e;
+  padding: 0 10px;
+  background-color: rgba(173, 173, 173, 0.26);
+  backdrop-filter: blur(20px);
+  border-radius: 0px 5px 5px 0px;
 }
 
 .cast_item {

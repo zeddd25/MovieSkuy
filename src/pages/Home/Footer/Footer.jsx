@@ -21,7 +21,7 @@ const Footer = () => {
                 <div to={"/"} className="logo_warp">
                   <img
                     className="imge"
-                    src="../src/assets/images/MovieSkuys.png"
+                    src="../../src/assets/images/MovieSkuys.png"
                     alt="logo"
                   />
                 </div>

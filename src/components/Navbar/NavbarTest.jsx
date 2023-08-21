@@ -1,18 +1,15 @@
 import { useState } from "react";
-import "../Navbar/Navbar.css";
+import "../Navbar/NavbarTest.css";
 import { NavLink } from "react-router-dom";
-import "../Navbar/Navbar.css";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // komponent dropdown list untuk navbar
 const DropdownList = ({ items }) => {
   return (
-    <div className="list_dropdown">
+    <div className="dropdown_list">
       <span>
         {items.map((item) => (
           <NavLink to={item.url} className="text_dropdown" key={item.id}>
-            ▶ {item.label}
+            ▶{item.label}
           </NavLink>
         ))}
       </span>
@@ -23,7 +20,6 @@ const DropdownList = ({ items }) => {
 // KOMPONEN NAVBAR
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isInputFocused, setIsInputFocused] = useState(false);
 
   const movieItems = [
     { id: 1, url: "/movies/top_rated", label: "Top Rated" },
@@ -51,27 +47,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className="wrap_navbar">
-      <div className="navbar">
+    <div className="wrap_navbar_home">
+      <div className="navbar_home">
         {/* LOGO */}
         <div>
           <NavLink to="/" className="logo">
             <img src="../../src/assets/images/MovieSkuys.png" alt="logo" />
           </NavLink>
-        </div>
-        {/* INPUT SEARCH */}
-        <div className={`wrap_search ${isInputFocused ? "focused" : ""}`}>
-          <div className="search_bar">
-            <input
-              type="text"
-              placeholder="Search..."
-              onFocus={() => setIsInputFocused(true)}
-              onBlur={() => setIsInputFocused(false)}
-            />
-          </div>
-          <div className="wrap_icon">
-            <FontAwesomeIcon className="search_icon" icon={faMagnifyingGlass} />
-          </div>
         </div>
         {/* DROPDOWN LIST */}
         <div className="wrap_dropdown">

@@ -23,13 +23,14 @@ const Search = () => {
         <input
           className="search"
           type="text"
-          placeholder="Cari films,"
+          placeholder="Cari films, tvshow, person"
           value={searchQuery}
           onChange={handleSearchInputChange}
         />
         <FontAwesomeIcon className="icons" icon={faMagnifyingGlass} />
       </div>
         <SearchResult searchResults={searchResults} />
+      
     </div>
   );
 };

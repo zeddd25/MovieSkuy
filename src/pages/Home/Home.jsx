@@ -8,15 +8,15 @@ import UpComing from "./UpComing/UpComing";
 import Footer from "./Footer/Footer";
 import CardHomeNew from "../../components/CardHome/CardHomeNew";
 import TopRated from "./AutoSlide/TopRated";
+import NavbarTest from "../../components/Navbar/NavbarTest";
 
 const Home = () => {
   return (
     <div>
       <div className="Home_warp_max">
         <div className="content">
-          <Navbar />
+      <NavbarTest />
           <HeroBanner />
-
 
           <TopRated />
 

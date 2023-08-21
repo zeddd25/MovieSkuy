@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import { fetchVideoData } from "../../utils/ApiUtils";
+import { fetchTvVideoData, fetchVideoData } from "../../utils/ApiUtils";
 import YouTube from "react-youtube";
 import "../CarouselVideo/CarouselVideo.css";
 
-const CarouselVideo = ({ movieId }) => {
-  const [videoData, setVideoData] = useState([]);
+const CarouselVideo = ({ movieId, tvShowId }) => {
+  const [movieVideoData, setMovieVideoData] = useState([]);
+  const [tvVideoData, setTvVideoData] = useState([]);
 
   useEffect(() => {
-    fetchVideoData(movieId, setVideoData);
+    fetchVideoData(movieId, setMovieVideoData);
   }, [movieId]);
+
+  useEffect(() => {
+    fetchTvVideoData(tvShowId, setTvVideoData);
+  }, [tvShowId]);
 
   const settings = {
     customPaging: function (i) {
+      // Use correct videoData based on the video type
+      const videoData = movieVideoData.length > 0 ? movieVideoData : tvVideoData;
       return (
         <div className="carousel_video_preview">
           <img
@@ -31,6 +38,9 @@ const CarouselVideo = ({ movieId }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+  // Use correct videoData based on the video type
+  const videoData = movieVideoData.length > 0 ? movieVideoData : tvVideoData;
 
   return (
     <div className="carousel_video">

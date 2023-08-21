@@ -11,6 +11,7 @@ import {
   handlePageClick,
   handlePrevPage,
 } from "../../utils/PaginationUtils";
+import Footer from "../../pages/Home/Footer/Footer";
 const Cards = React.lazy(() => import("../Card/Card"));
 
 const MovieList = () => {
@@ -64,31 +65,41 @@ const MovieList = () => {
   };
 
   return (
-    <div className="container">
-      <Navbar />
-      <div className="movie_list">
-        <div className="list_cards">
-          {/* MOVIE LIST NAME */}
-          <div className="wrap_list_title">
-            <h2 className="list_title">
-              {type ? type.toUpperCase() : "POPULAR"}
-            </h2>
+    <>
+      <div className="wrap_movielist">
+        <div className="movie_list">
+          <Navbar />
+          <div className="list_cards">
+            {/* MOVIE LIST NAME */}
+            <div className="warp_movielist_title">
+              <hr className="movielist_line" />
+              <div className="movielist_title">
+                <div className="movielist_text">
+                  {type ? type.toUpperCase() : "POPULAR"}
+                </div>
+                <div className="movielist_gradient"></div>
+              </div>
+              <hr className="movielist_line" />
+            </div>
+            {/* CARD */}
+            <div className="parent_wrap_card">
+              <div className="wrap_card">{renderCards()}</div>
+            </div>
           </div>
-          {/* CARD */}
-          <div className="wrap_card">{renderCards()}</div>
+          {/*  */}
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            handlePrevPage={() => handlePrevPage(currentPage, setCurrentPage)}
+            handleNextPage={() =>
+              handleNextPage(currentPage, totalPages, setCurrentPage)
+            }
+            handlePageClick={(page) => handlePageClick(page, setCurrentPage)}
+          />
         </div>
-        {/*  */}
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          handlePrevPage={() => handlePrevPage(currentPage, setCurrentPage)}
-          handleNextPage={() =>
-            handleNextPage(currentPage, totalPages, setCurrentPage)
-          }
-          handlePageClick={(page) => handlePageClick(page, setCurrentPage)}
-        />
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
