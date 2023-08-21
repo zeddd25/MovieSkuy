@@ -10,7 +10,7 @@ import {
 
 const UpComing = () => {
   const [upComing, setUpcoming] = useState([]);
-  const { type } = useParams();
+  const { type, id } = useParams();
 
   const getRandomColor = () => {
     // Fungsi untuk menghasilkan warna acak dalam format rgb
@@ -50,51 +50,53 @@ const UpComing = () => {
         <hr className="garis" />
       </div>
       {/*  */}
-      <Link
-        to={"/Home"}
-        style={{ textDecoration: "none", color: "white" }}
-        // INI CLASSS NYA
-        className="warp_card_upcoming"
-      >
+      <div className="warp_all_card_upcoming">
         {upComing.map((Up, i) => (
-          <div className="warp_Upcoming" key={i}>
-            {/* Gambar */}
-            <div className="posterImage__titleHome">
-              <img
-                className="posterImage__titleHome_chill"
-                src={`https://image.tmdb.org/t/p/original${
-                  Up && Up.poster_path
-                }`}
-              />
-            </div>
-            {/* Warp Judul & Tanggal */}
-            <div className="warp_jdl_tgl">
-              {/* Judul */}
-              <div>
-                <p className="judul_upcoming1">{Up?.title}</p>
+          <Link
+            to={`movie/detail/${Up.id}`}
+            style={{ textDecoration: "none", color: "white" }}
+            // INI CLASSS NYA
+            className="warp_card_upcoming"
+          >
+            <div className="warp_Upcoming" key={i}>
+              {/* Gambar */}
+              <div className="posterImage__titleHome">
+                <img
+                  className="posterImage__titleHome_chill"
+                  src={`https://image.tmdb.org/t/p/original${
+                    Up && Up.poster_path
+                  }`}
+                />
               </div>
-              <div className="warp_up_Info">
-                {/* tangal tayang */}
-                <div className="warp_up_subInfo">
-                  <FontAwesomeIcon icon={faStar} id="icons" />
-                  <p className="tanggal_tayang1">Rating :</p>
-                  <p className="tanggal_tayang1">{Up?.vote_average}</p>
+              {/* Warp Judul & Tanggal */}
+              <div className="warp_jdl_tgl">
+                {/* Judul */}
+                <div>
+                  <p className="judul_upcoming1">{Up?.title}</p>
                 </div>
-                <div className="warp_up_subInfo">
-                  <FontAwesomeIcon icon={faUser} id="icons2" />
-                  <p className="tanggal_tayang1">Popularity</p>
-                  <p className="tanggal_tayang1">{Up?.popularity}</p>
-                </div>
-                <div className="warp_up_subInfo">
-                  <FontAwesomeIcon icon={faCalendarDays} id="icons2" />
-                  <p className="tanggal_tayang1">Release Date</p>
-                  <p className="tanggal_tayang1">{Up?.release_date}</p>
+                <div className="warp_up_Info">
+                  {/* tangal tayang */}
+                  <div className="warp_up_subInfo">
+                    <FontAwesomeIcon icon={faStar} id="icons" />
+                    <p className="tanggal_tayang1">Rating :</p>
+                    <p className="tanggal_tayang1">{Up?.vote_average}</p>
+                  </div>
+                  <div className="warp_up_subInfo">
+                    <FontAwesomeIcon icon={faUser} id="icons2" />
+                    <p className="tanggal_tayang1">Popularity</p>
+                    <p className="tanggal_tayang1">{Up?.popularity}</p>
+                  </div>
+                  <div className="warp_up_subInfo">
+                    <FontAwesomeIcon icon={faCalendarDays} id="icons2" />
+                    <p className="tanggal_tayang1">Release Date</p>
+                    <p className="tanggal_tayang1">{Up?.release_date}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
-      </Link>
+      </div>
     </div>
   );
 };
