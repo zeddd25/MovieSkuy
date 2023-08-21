@@ -6,6 +6,7 @@
     gap: 30px;
     height: auto;
     margin: auto;
+
     /* background-color: burlywood; */
   }
 
@@ -239,13 +240,27 @@
     /* background-color: antiquewhite; */
   }
 
-  .warp_card_upcoming {
+  .warp_all_card_upcoming {
+    position: relative;
     width: 100%;
     height: auto;
-    /* background-color: brown; */
+    /* background-color: #16bc0e; */
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px 21px;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .warp_card_upcoming {
+    max-width: 340px;
+    height: auto;
+    /* background-color: brown; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* gap: 20px; */
+    /* flex-wrap: wrap; */
+    /* gap: 10px 21px; */
     /* padding-top: 10p; */
   }
 
@@ -255,9 +270,9 @@
   }
 
   .warp_Upcoming {
-    width: 23%;
+    /* width: 100px; */
     height: 120px;
-    background-color: #2d223a94;
+    background-color: #2d223a7c;
     backdrop-filter: blur(30px);
     border: 1px solid rgba(255, 255, 255, 0.341);
     display: flex;
